@@ -1,0 +1,20 @@
+name: pwsh-script
+
+on:
+  schedule:
+    - cron: "5 16 * * *"
+    - cron: "5 4 * * *"
+    - cron: "5 10 * * *"
+
+jobs:
+  run:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run script
+        env:
+          IS_AT_SCHOOL: ${{ secrets.IS_AT_SCHOOL }}
+          BUPT_USERNAME: ${{ secrets.BUPT_USERNAME }}
+          BUPT_PASSWORD: ${{ secrets.BUPT_PASSWORD }}
+        run: |
+          ./main.ps1
