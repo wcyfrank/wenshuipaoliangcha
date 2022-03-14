@@ -15,6 +15,6 @@ jobs:
         env:
           IS_AT_SCHOOL: ${{ secrets.0 }}
           BUPT_USERNAME: ${{ secrets.2019213469 }}
-          BUPT_PASSWORD: ${{ secrets.Chenchen042099 }}
+          BUPT_PASSWORD: ${{ secrets.04209331}}
         run: |
           ./main.ps1
