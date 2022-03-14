@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run script
         env:
-          IS_AT_SCHOOL: ${{ secrets.0 }}
-          BUPT_USERNAME: ${{ secrets.2019213469 }}
-          BUPT_PASSWORD: ${{ secrets.04209331}}
+            IS_AT_SCHOOL: ${{ secrets.IS_AT_SCHOOL }}
+          BUPT_USERNAME: ${{ secrets.BUPT_USERNAME }}
+          BUPT_PASSWORD: ${{ secrets.BUPT_PASSWORD }}
         run: |
           ./main.ps1
